@@ -1,0 +1,11 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block fonts %}
+{% endblock %}
+
+{% block content %}
+    <TItle>Mainpage</TItle>
+    <h1>Mainpage</h1>
+    <a href="{% url 'home' %}"> HOME</a> | <a href="{% url 'about' %}"> ABOUT</a>
+{% endblock %}
