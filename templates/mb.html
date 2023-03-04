@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block fonts %}
+{% endblock %}
+
+{% block content %}
+    <TItle>Forum</TItle>
+    
+    <ul>
+        <h3>Message board</h3>
+        {% for post in object_list %}
+        <li>
+            {{ post }}
+        </li>
+        {% endfor %}
+    </ul>
+        
+    <a href="{% url 'home' %}"> HOME</a>
+{% endblock %}
