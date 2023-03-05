@@ -1,3 +1,4 @@
+<!-- templates/mb.html -->
 {% extends 'base.html' %}
 
 {% block fonts %}
@@ -6,14 +7,21 @@
 {% block content %}
     <TItle>Forum</TItle>
     
-    <ul>
-        <h3>Message board</h3>
-        {% for post in object_list %}
-        <li>
-            {{ post }}
-        </li>
-        {% endfor %}
-    </ul>
+    
         
     <a href="{% url 'home' %}"> HOME</a>
+    <header>
+        <h1>Blog</h1>
+    </header>
+
+    <ul>
+        {% for blog in object_list %}
+            <div class = 'post-entry'>
+                <li>
+                    <h2><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></h2>
+                    <p>{{ blog.body }}</p>
+                </li>
+            </div>
+        {% endfor %}
+    </ul>
 {% endblock %}
