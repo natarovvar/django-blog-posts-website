@@ -6,4 +6,7 @@
         <h2>{{ detail.title }}</h2>
         <p>{{ detail.body }}</p>
     </div>
+
+    <a href="{% url 'blog_edit' detail.pk %}"> + Edit Blog Post</a>
+    <a href="{% url 'blog_delete' detail.pk %}"> + Delete Blog Post</a>
 {% endblock content %}

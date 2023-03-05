@@ -12,6 +12,9 @@
     <a href="{% url 'home' %}"> HOME</a>
     <header>
         <h1>Blog</h1>
+        <div class = 'nav-right'>
+            <a href="{% url 'post_new' %}"> + New Blog Post</a>
+        </div>
     </header>
 
     <ul>
@@ -24,4 +27,6 @@
             </div>
         {% endfor %}
     </ul>
+
+    
 {% endblock %}
