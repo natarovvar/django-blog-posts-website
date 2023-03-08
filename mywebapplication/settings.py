@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'pages', # pages app
     'posts', # posts app
+    'accounts', # accounts app
 ]
 
 MIDDLEWARE = [
