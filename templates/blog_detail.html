@@ -3,10 +3,12 @@
 
 {% block content %}
     <div class = 'post-entry'>
-        <h2>{{ detail.title }}</h2>
+        <h2 class = 'title'>{{ detail.title }}</h2>
+        <p>Author: {{ detail.author }}</p>
         <p>{{ detail.body }}</p>
     </div>
 
-    <a href="{% url 'blog_edit' detail.pk %}"> + Edit Blog Post</a>
-    <a href="{% url 'blog_delete' detail.pk %}"> + Delete Blog Post</a>
+
+    <a class = "edit-post" href="{% url 'blog_edit' detail.pk %}"><i class="bi bi-pencil-square"></i> Edit Blog Post</a>
+    <a class = "delete-post" href="{% url 'blog_delete' detail.pk %}"><i class="bi bi-trash2"></i> Delete Blog Post</a>
 {% endblock content %}

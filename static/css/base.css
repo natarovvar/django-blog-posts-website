@@ -1,23 +1,106 @@
 /* static/css/base.css */
-
-
-header h1{
-    
-    font-family: 'Kanit', sans-serif;
-    border-bottom: 1px solid #999;
-    margin-bottom: 2rem;
-    display: flex;
+head{
+    text-decoration: none;
 }
+
+header a{
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.homepage  {
+    text-decoration: none;
+    margin-top: 250px;
+    
+    border: solid #8cff56;
+    border-left-width: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    width:30%;
+    height: 150%;
+    margin-left: 40%;
+    
+}
+
+.homepage a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+.navigation-bar ul{
+    font-family: 'Kanit', sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    margin-bottom: 2rem;
+    
+    
+}
+
+.navigation-bar li {
+  float: left;
+}
+
+.navigation-bar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigation-bar .active {
+    background-color: #04AA6D;
+  }
+
+.navigation-bar li a:hover:not(.active) {
+  background-color: #111;
+}
+
+
+
 
 body{
+    margin-top: 60px;
     font-size: 18px;
+    background-color: #333;
+    color: white;
+    
 }
 
-
-.post-entry a{
-    text-decoration: none;
+.post-entry{
+    margin-right: 30%;
+    margin-left: 2%;
+}
+.post-entry h2{
     font-family: 'Kanit', sans-serif;
 }
+.post-entry a{
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+    color: #04AA6D;
+    
+}
 
+.post-entry .title{
+    text-decoration: underline #04AA6D;
+}
 
+.edit-post {
+    
+    color: #04AA6D;
+    text-decoration: none;
+}
 
+.delete-post{
+    color: #04AA6D;
+    text-decoration: none;
+}

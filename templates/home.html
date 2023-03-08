@@ -5,9 +5,12 @@
 {% endblock %}
 
 {% block content %}
+
     <TItle>Mainpage</TItle>
-    <h1>Mainpage</h1>
-    <a href="{% url 'home' %}"> HOME</a> |  <a href="{% url 'forum' %}"> FORUM</a>
-    
+
+    <div class = 'homepage'>
+        <h1>Mainpage</h1>
+          <a href="{% url 'forum' %}"> FORUM</a>
+    </div>
     
 {% endblock %}
