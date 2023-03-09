@@ -3,11 +3,19 @@
 
 
 {% block content %}
-    <h2>Login</h2>
-        <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-            <button class = 'btn btn-success ml-1' type="submit">Login</button>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
 
-        </form>
+    <div class = 'login-form'>
+        <h3><i class="bi bi-box-arrow-in-right"></i> Login Here</h3>
+
+            <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+                <button class = 'loginbut' type="submit">Login</button>
+
+            </form>
+    </div>
 {% endblock content %}

@@ -65,6 +65,128 @@ header a{
   background-color: #111;
 }
 
+.login-form{
+    height: 420px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.027);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+
+.signup-form{
+
+    height: 600px;
+    width: 700px;
+    background-color: rgba(255, 255, 255, 0.027);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    
+}
+
+.signup-form *{
+    font-family: 'Kanit', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    
+}
+
+.login-form *{
+    font-family: 'Kanit', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    
+}
+
+.login-form h3{
+    padding-bottom: 20px;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    
+}
+
+.signup-form h3{
+    padding-bottom: 20px;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    
+}
+
+.loginbut{
+
+    margin-top: 50px;
+    width: 100%;
+    background-color: #8cff56;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signupbut{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #8cff56;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
 
 
 
@@ -77,6 +199,7 @@ body{
 }
 
 .post-entry{
+    
     margin-right: 30%;
     margin-left: 2%;
 }
@@ -87,17 +210,34 @@ body{
     font-family: 'Kanit', sans-serif;
     text-decoration: none;
     color: #04AA6D;
-    
 }
 
-.post-entry .title{
-    text-decoration: underline #04AA6D;
+.post-entry a:after {
+	display: block;
+	position: absolute;
+	left: 20; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #00a650; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; 
 }
+
+    .post-entry a:hover:after,
+    .post-entry a:focus:after {
+        width: 40%; 
+    }
+    .post-entry .title{
+        text-decoration: underline #04AA6D;
+
+    }
+
 
 .edit-post {
     
     color: #04AA6D;
     text-decoration: none;
+    
 }
 
 .delete-post{

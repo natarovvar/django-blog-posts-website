@@ -17,7 +17,7 @@
             <ul>
                 <li><a class = "blog" href="{% url 'forum' %}"><i class="bi bi-chat-fill"></i> Blog</a></li>
                 <li style="float:right"><a class="active" href="{% url 'post_new' %}"><i class="bi bi-plus-square-fill"></i> New Blog Post</a></li>
-                <li style="float:right"><a href="{% url 'login' %}"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+                <li style="float:right"><a class = 'forum-login'href="{% url 'login' %}"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
                 <li style="float:right"> <a href="{% url 'signup' %}"> Sign up</a></li>
                 
             </ul>
@@ -35,7 +35,7 @@
         {% for blog in object_list %}
             <div class = 'post-entry'>
                 <li>
-                    <h2><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></h2>
+                    <h2><a class = 'blog-title' href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></h2>
                     <p>{{ blog.body }}</p>
                 </li>
             </div>
