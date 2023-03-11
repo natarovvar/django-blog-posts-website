@@ -137,3 +137,21 @@ LOGOUT_REDIRECT_URL = 'forum'
 LOGOUT_URL = 'forum'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# password reset
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = "django_smtp_ssl.SSLEmailBackend"
+
+
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'reiting2101@mail.ru'
+EMAIL_HOST_PASSWORD = 'sendgridpassword'
+# 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
+
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+
+SENDGRID_API_KEY = "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"
