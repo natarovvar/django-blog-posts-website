@@ -12,7 +12,6 @@ header a{
 .homepage  {
     text-decoration: none;
     margin-top: 250px;
-    
     border: solid #8cff56;
     border-left-width: 20px;
     padding: 10px;
@@ -26,6 +25,11 @@ header a{
 .homepage a{
     text-decoration: none;
     color: white;
+    
+}
+
+.blog{
+    font-family: 'Kanit', sans-serif;
     
 }
 
@@ -58,7 +62,8 @@ header a{
 }
 
 .navigation-bar .active {
-    background-color: #04AA6D;
+    background-color: #8cff56;
+    color: black;
   }
 
 .navigation-bar li a:hover:not(.active) {
@@ -99,7 +104,6 @@ header a{
 
 .signup-form *{
     font-family: 'Kanit', sans-serif;
-    color: #ffffff;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -108,7 +112,6 @@ header a{
 
 .login-form *{
     font-family: 'Kanit', sans-serif;
-    color: #ffffff;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -156,7 +159,7 @@ header a{
     cursor: pointer;
 }
 
-.background{
+.login-background{
     width: 430px;
     height: 520px;
     position: absolute;
@@ -164,12 +167,14 @@ header a{
     left: 50%;
     top: 50%;
 }
-.background .shape{
+.login-background .shape{
     height: 200px;
     width: 200px;
     position: absolute;
     border-radius: 50%;
 }
+
+
 .shape:first-child{
     background: linear-gradient(
         #1845ad,
@@ -209,7 +214,7 @@ body{
 .post-entry a{
     font-family: 'Kanit', sans-serif;
     text-decoration: none;
-    color: #04AA6D;
+    color: #8cff56;
 }
 
 .post-entry a:after {
@@ -218,7 +223,7 @@ body{
 	left: 20; /*изменить на right:0;, чтобы изменить направление подчёркивания */
 	width: 0;/*задаём длинну линии до наведения курсора*/
 	height: 2px; /*задаём ширину линии*/
-	background-color: #00a650; /*задаём цвет линии*/
+	background-color: #8cff56; /*задаём цвет линии*/
 	content: "";
 	transition: width 0.3s ease-out; 
 }
@@ -228,19 +233,19 @@ body{
         width: 40%; 
     }
     .post-entry .title{
-        text-decoration: underline #04AA6D;
+        text-decoration: underline #8cff56;
 
     }
 
 
 .edit-post {
     
-    color: #04AA6D;
+    color: #8cff56;
     text-decoration: none;
     
 }
 
 .delete-post{
-    color: #04AA6D;
+    color: #8cff56;
     text-decoration: none;
 }

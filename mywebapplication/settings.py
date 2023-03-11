@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+
+    'crispy_forms',
+    'crispy_bootstrap4',
+
     'pages', # pages app
     'posts', # posts app
     'accounts', # accounts app
@@ -131,3 +135,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'forum'
 LOGOUT_REDIRECT_URL = 'forum'
 LOGOUT_URL = 'forum'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

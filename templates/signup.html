@@ -1,6 +1,6 @@
 <!-- templates/signup.html -->
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 
 {% block content %}
     <div class="background">
@@ -12,7 +12,7 @@
         <h3>Sign up</h3>
             <form action="" method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form|crispy }}
                 <button class = 'signupbut' type="submit">Sign up</button>
 
             </form>
