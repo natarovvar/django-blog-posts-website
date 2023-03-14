@@ -9,13 +9,14 @@
     </div>
 
     <div class = 'login-form'>
-        <h3><i class="bi bi-box-arrow-in-right"></i> Login Here</h3>
+        <h1><i class="bi bi-box-arrow-in-right"></i> Login Here</h1>
 
             <form action="" method="post">
             {% csrf_token %}
             {{ form.as_p }}
+            <a class = 'forgot-password' href="{% url 'password_reset' %}">Forgot your password?</a>
                 <button class = 'loginbut' type="submit">Login</button>
-
+                
             </form>
     </div>
 {% endblock content %}

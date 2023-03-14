@@ -18,20 +18,28 @@
             </ul>
         </div>
         
-        {% if user.is_authenticated %}
-            <p>Hi {{ user.username }}!</p>
-            <p><a href="{% url 'logout' %}">Logout</p></a>
-        {% else %}
-        <p>You are not logged in.</p>
-        {% endif %}
+        <div class = 'service-messages'>
+            {% if user.is_authenticated %}
+                <p>Hi {{ user.username }}!</p>
+                <p><a href="{% url 'logout' %}">Logout</p></a>
+            {% else %}
+            <p>You are not logged in.</p>
+            {% endif %}
+        </div>
     </header>
 
     <ul>
         {% for blog in object_list %}
             <div class = 'post-entry'>
                 <li>
+                    <div class = 'blog-title-body'>
                     <h2><a class = 'blog-title' href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></h2>
                     <p>{{ blog.body }}</p>
+                    <a class = 'read-more' href="{% url 'blog_detail' blog.pk  %}">
+                        <i class="bi bi-three-dots"></i>
+                    </a>
+                    <p class = "blog-author">Author: {{ blog.author }} </p>
+                    </div>  
                 </li>
             </div>
         {% endfor %}

@@ -1,11 +1,16 @@
 <!-- templates/blog_edit.html -->
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
+<div class="edit-background"></div>
+
+<div class = 'post-edit'>
     <h1>Edit post</h1>
         <form action=" " method = 'post' >
             {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value = 'Update' >
+            {{ form|crispy }}
+            <input class = 'update-button' type="submit" value = 'Update' >
         </form>
+</div>
 {% endblock %}

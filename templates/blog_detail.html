@@ -2,13 +2,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class = 'post-entry'>
-        <h2 class = 'title'>{{ detail.title }}</h2>
-        <p>Author: {{ detail.author }} Date: {{ detail.date }}</p>
-        <p>{{ detail.body }}</p>
+    
+    <div class = 'post-detail'>
+        <div class = 'blog-title-body-detail'>
+            <h2 class = 'detail-title'>{{ detail.title }}</h2>
+                <h7 >Author:</h7> <h6>{{ detail.author }}</h6> 
+                <p>Date: {{ detail.date }}</p>
+                <p>{{ detail.body }}</p>
+                <a class = "edit-post" href="{% url 'blog_edit' detail.pk %}"><i class="bi bi-pencil-square"></i> Edit Blog Post</a>
+                <a class = "delete-post" href="{% url 'blog_delete' detail.pk %}"><i class="bi bi-trash2"></i> Delete Blog Post</a>
+        </div>  
+        <a class = 'go-back-button' href="{% url 'forum' %}">Go back</a>
     </div>
 
 
-    <a class = "edit-post" href="{% url 'blog_edit' detail.pk %}"><i class="bi bi-pencil-square"></i> Edit Blog Post</a>
-    <a class = "delete-post" href="{% url 'blog_delete' detail.pk %}"><i class="bi bi-trash2"></i> Delete Blog Post</a>
+
 {% endblock content %}

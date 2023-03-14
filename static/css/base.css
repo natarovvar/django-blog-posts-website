@@ -43,8 +43,9 @@ header a{
   text-decoration: none;
 }
 
+
 .navigation-bar .active {
-    background-color: #1abc9c;
+    background-color: #ecf8a3;
     color: black;
   }
 
@@ -54,7 +55,7 @@ header a{
 
 
 .login-form{
-    height: 420px;
+    height: 480px;
     width: 400px;
     background-color: rgba(255, 255, 255, 0.027);
     position: absolute;
@@ -63,17 +64,48 @@ header a{
     left: 50%;
     border-radius: 10px;
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
+    border: 2px solid #ecf8a3;
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
 }
 
+.password-reset-form{
+    height: 400px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.027);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid #ecf8a3;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    color: white;
+    border: 2px solid #ecf8a3;
+}
 
+.password-reset-form .password-reset-form-button{
+    margin-top: 10%;
+    width: 100%;
+    background-color: #ecf8a3;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.password-reset-form h1{
+    font-family: 'Kanit', sans-serif;
+}
 
 .signup-form{
 
-    height: 600px;
-    width: 700px;
+    height: 90%;
+    width: 80%;
     background-color: rgba(255, 255, 255, 0.027);
     position: absolute;
     transform: translate(-50%,-50%);
@@ -83,8 +115,24 @@ header a{
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
-    
+    padding: 30px 35px;
+    border: 2px solid #ecf8a3;
+}
+
+.signup-form label{
+    color: white;
+}
+
+.signup-form input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .password-change-form{
@@ -112,7 +160,7 @@ header a{
     align-items : center ;
     height: 420px;
     width: 400px;
-    background-color: rgba(255, 255, 255, 0.027);
+    background-color: #ecf8a3;
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
@@ -128,11 +176,17 @@ header a{
     background-color: black;
 }
 
+.login-form a{
+    text-decoration: none;
+    color: #111;
+}
+
 .signup-form *{
     font-family: 'Kanit', sans-serif;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
+    
     
 }
 
@@ -141,6 +195,7 @@ header a{
     letter-spacing: 0.5px;
     outline: none;
     border: none;
+    
     
 }
 
@@ -152,10 +207,11 @@ header a{
 }
 
 
-.login-form h3{
+.login-form h1{
     padding-bottom: 20px;
-    font-size: 32px;
+    
     line-height: 42px;
+    color: white;
     text-align: center;
     
 }
@@ -163,12 +219,13 @@ header a{
 
 
 
-.signup-form h3{
+.signup-form h1{
     padding-bottom: 20px;
     font-size: 32px;
     line-height: 42px;
     text-align: center;
-    
+    color: white;
+    font-family: 'Kanit', sans-serif;
 }
 
 
@@ -184,9 +241,9 @@ header a{
 
 .loginbut{
 
-    margin-top: 50px;
+    margin-top: 7%;
     width: 100%;
-    background-color: #1abc9c;
+    background-color: #ecf8a3;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
@@ -198,7 +255,7 @@ header a{
 .signupbut{
     margin-top: 20px;
     width: 100%;
-    background-color: #1abc9c;
+    background-color: #ecf8a3;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
@@ -208,13 +265,30 @@ header a{
 }
 
 .home-background{
-    background-color: #1abc9c;
+    background-color: #ecf8a3;
     width: 100%;
     height: 100%;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
     top: 50%;
+}
+
+.login-form label{
+    color: white;
+}
+
+.login-form input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    
 }
 
 .login-background{
@@ -255,19 +329,183 @@ header a{
 }
 
 
-
+/* blog background */
 body{
     margin-top: 60px;
     font-size: 18px;
-    background-color: #333;
-    color: white;
+    background-color: rgb(37,39,51);
+    color: black;
+    
     
 }
+/* blog cards */
+.post-entry .blog-title-body{
+    margin-top: 20px;
+    width: 110%;
+    height: 50%;
+    background-color: #ecf8a3    ;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    letter-spacing: 2px;
+    margin-left: 10%;
+    text-decoration: none;
+    
+    
+    
+}
+
+.post-detail .blog-title-body-detail{
+    margin-top: 20px;
+    width: 80%;
+    height: 50%;
+    background-color: #ecf8a3    ;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    letter-spacing: 2px;
+    margin-left: 10%;
+    text-decoration: none;
+    
+    
+    
+}
+
+.blog-title-body-detail h2{
+    margin-bottom: 5%;
+    text-decoration: underline black;
+
+}
+
+.blog-title-body-detail h7{
+    color: #1abc9c;
+}
+
+.post-new{
+    
+    height: 650px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.027);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid #ecf8a3;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+
+.post-new input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.post-new label{
+    color: white;
+    padding-left: 70px;
+}
+
+.post-new select{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.post-new h1{
+    margin-bottom: 5%;
+    text-align: center;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+.post-edit {
+    
+    height: 80%;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.027);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid #ecf8a3;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+
+}
+
+.edit-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    background-color: rgb(37,39,51);
+}
+
+.post-edit h1{
+    margin-bottom: 5%;
+    text-align: center;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+}
+
+.post-edit .update-button{
+    margin-top: 2%;
+    width: 100%;
+    background-color: #ecf8a3;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-edit label{
+    color: white;
+}
+
+.go-back-button{
+    margin-left: 1%;
+    width: 100%;
+    background-color: #ecf8a3;
+    color: #080710;
+    padding: 15px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 
 .post-entry{
     
     margin-right: 30%;
     margin-left: 2%;
+    
 }
 .post-entry h2{
     font-family: 'Kanit', sans-serif;
@@ -275,16 +513,49 @@ body{
 .post-entry a{
     font-family: 'Kanit', sans-serif;
     text-decoration: none;
-    color: #1abc9c;
+    color: black;
 }
 
-.post-entry a:after {
+
+
+.post-entry .blog-author{
+    color: black;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-left: 70%;
+    
+}
+
+ .post-entry .read-more{
+    color: black;
+    margin-top: 20%;
+    width: 2px;
+	height: 2px;
+    border: 2px solid black;
+    border-radius: 10px;
+   
+    padding: 5px 20px;
+    border-radius: 10px;
+    
+    
+    
+} 
+
+ .post-entry .read-more:hover{
+    background-color: white;
+
+} 
+
+
+
+
+.post-entry .blog-title:after {
 	display: block;
 	position: absolute;
 	left: 20; /*изменить на right:0;, чтобы изменить направление подчёркивания */
 	width: 0;/*задаём длинну линии до наведения курсора*/
 	height: 2px; /*задаём ширину линии*/
-	background-color: #1abc9c; /*задаём цвет линии*/
+	background-color: black; /*задаём цвет линии*/
 	content: "";
 	transition: width 0.3s ease-out; 
 }
@@ -301,14 +572,20 @@ body{
 
 .edit-post {
     
+    margin-left: 60%;
     color: #1abc9c;
     text-decoration: none;
     
 }
 
 .delete-post{
+    
     color: #1abc9c;
     text-decoration: none;
+}
+
+.login-form .forgot-password{
+    color: white;
 }
 
 
@@ -316,7 +593,7 @@ body{
 :root{
     /* color type A */
     --line_color : #555555 ;
-    --back_color : #FFECF6  ;
+    --back_color : white  ;
 
     /* color type B */
     /* --line_color : #1b1919 ;
@@ -535,4 +812,6 @@ body{
     100% { width : 124px ; }
 }
 
-
+.service-messages{
+    color: white;
+}
