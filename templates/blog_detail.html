@@ -25,6 +25,7 @@
         </p>
         {{ detail.date }}
         {% endfor %}
+        <a href="{% url 'new_comment' detail.pk %}">add comment</a>
     </div>
 
 
