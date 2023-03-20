@@ -15,6 +15,18 @@
         <a class = 'go-back-button' href="{% url 'forum' %}">Go back</a>
     </div>
 
+    <div class = 'comments'>
+        
+        {% for comment in detail.comments.all %} 
+        <p>
+            <span class = 'font-weight-bold'>{{ detail.author }}: </span>
+            {{ comment }}
+            
+        </p>
+        {{ detail.date }}
+        {% endfor %}
+    </div>
+
 
 
 {% endblock content %}

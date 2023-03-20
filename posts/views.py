@@ -4,6 +4,7 @@ from django .views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Post
 from .models import Blog
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # class MessageBoardPageView(ListView):
 #    model = Post
@@ -13,20 +14,28 @@ class BlogListView(ListView):
     model = Blog
     template_name = 'mb.html'
 
-class BlogDetailView(DetailView):
+class BlogDetailView(LoginRequiredMixin,DetailView):
     model = Blog
     template_name = 'blog_detail.html'
     context_object_name = 'detail'
+    login_url = 'login'
 
-class BlogCreateView(CreateView):
+class BlogCreateView(LoginRequiredMixin, CreateView):
     model = Blog
     template_name = 'post_new.html'
-    fields = '__all__'
+    fields = ['title', 'body']
+    login_url = 'login'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 class BlogUpdateView(UpdateView):
     model = Blog
     template_name = 'blog_edit.html'
     fields = ['title', 'body']
+
+    
 
 class BlogDeleteView(DeleteView):
     model = Blog
