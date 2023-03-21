@@ -397,6 +397,7 @@ body{
 }
 
 .blog-title-body-detail h7{
+    font-weight: bold;
     color: #1abc9c;
 }
 
@@ -583,6 +584,11 @@ body{
         text-decoration: underline #1abc9c;
 
     }
+
+.new-comment{
+    color: #1abc9c;
+    text-decoration: none;
+}
 
 
 .edit-post {

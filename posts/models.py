@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 
 class Post(models.Model):
     text = models.TextField()
@@ -13,7 +14,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=200)
     author = models.ForeignKey('auth.User', on_delete = models.CASCADE)
     body = models.TextField()
-    date = models.DateTimeField(auto_now=True)
+    date = models.DateTimeField(timezone.now(),auto_now=True)
 
     def __str__(self):
         return self.title
@@ -31,4 +32,4 @@ class Comment(models.Model):
         return self.comment
     
     def get_absolute_url(self):
-        return reverse('forum')
+        return reverse('blog_detail', args = [str(self.id)])
