@@ -2,6 +2,7 @@
 The application allows you to create blog entries for registered users, edit and delete them, as well as leave comments.
 
 ## Images
+![Mainpage — Личный_ Microsoft_ Edge 2023-03-26 20-57-00](https://user-images.githubusercontent.com/111649346/227781361-583f8d11-f196-4cc0-acdb-cf33fe29e04b.gif)
 
 ## Technology Stack
 * Python 3.7.x
